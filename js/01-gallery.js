@@ -37,7 +37,9 @@ function onContainerClick(evt){
     `)
     modalImage.show(); 
 
-    galleryContainer.addEventListener('keyup', (e) => {
-        if(e.keyCode === 27) modalImage.close();
-    });
+    if (modalImage.show()){
+        galleryContainer.addEventListener('keyup', (e) => {
+            if(e.keyCode === 27) modalImage.close();
+        })
+    }
 }
